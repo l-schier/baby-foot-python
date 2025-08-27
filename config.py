@@ -1,23 +1,10 @@
-from urllib.parse import urlparse
+import os
 
-ENV = "prod"
+ENV = "dev"
 
-if ENV == 'dev':
-    DATABASE_CONFIG = {
-        'host': "localhost",
-        'database': "babyfoot",
-        'user': "postgres",
-        'password': "**"**
-    }
-else: 
-
-    uri = "****"
-    parsed_uri = urlparse(uri)
-
-    DATABASE_CONFIG = {
-        'host': "****",
-        'database': "****",
-        'user': "****",
-        'password': "****",
-        'port': "****"
-    } 
+DATABASE_CONFIG = {
+    "host": os.getenv("DB_HOST"),
+    "database": os.getenv("DB", "babyfoot"),
+    "user": os.getenv("USER", "postgres"),
+    "password": os.getenv("PWD"),
+}
