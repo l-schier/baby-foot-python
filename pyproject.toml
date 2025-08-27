@@ -17,6 +17,7 @@ dependencies = [
     "dash-core-components==2.0.0",
     "dash-html-components==2.0.0",
     "dash-table==5.0.0",
+    "dotenv>=0.9.9",
     "et-xmlfile==1.1.0",
     "flask==2.2.2",
     "flask-session==0.4.0",

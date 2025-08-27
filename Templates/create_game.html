@@ -41,7 +41,7 @@
     </select>
     <!-- Team 1 Score Label -->
     <label for="team1_score" class="score-label">Score</label>
-    <input type="number" id="team1_score" name="team1_score" value="" min="0" max="11" inputmode="numeric">
+    <input type="number" id="team1_score" name="team1_score" value="" min="0" max="10" inputmode="numeric">
     <br>
     <!-- Team 2 Label -->
     <label for="player1_name" class="team-label">Team 2 </label>
@@ -60,7 +60,7 @@
     </select>
     <!-- Team 2 Score Label -->
     <label for="team2_score" class="score-label">Score</label>
-    <input type="number" id="team2_score" name="team2_score" value="" min="0" max="11" inputmode="numeric">
+    <input type="number" id="team2_score" name="team2_score" value="" min="0" max="10" inputmode="numeric">
     <!-- Game Date Label -->
     <label for="game_date" class="date-label">Date</label>
         <input type="date" id="game_date" name="game_date" value="">
@@ -93,7 +93,7 @@
       
               // Check if the scores are integers between 0 and 11
               if (!Number.isInteger(+team1_score) || !Number.isInteger(+team2_score)) {
-                  alert("Scores must be integers between 0 and 11.");
+                  alert("Scores must be integers between 0 and 10.");
                   return false;
               } 
       
@@ -104,8 +104,8 @@
               }
       
               // Check if the scores are not greater than 11
-              if (team1_score > 11 || team2_score > 11) {
-                  alert("Scores cannot be greater than 11.");
+              if (team1_score > 10 || team2_score > 10) {
+                  alert("Scores cannot be greater than 10.");
                   return false;
               }
 
@@ -114,12 +114,12 @@
                   alert("Scores cannot be lower than 0.");
                   return false;
               }
-      
-              // Check if one of the scores is equal to 11
-              if (team1_score != 11 && team2_score != 11) {
-                  alert("One of the scores must be equal to 11.");
-                  return false;
-              }
+              
+              // // Check if one of the scores is equal to 11
+              // if (team1_score != 10 && team2_score != 10) {
+              //     alert("One of the scores must be equal to 11.");
+              //     return false;
+              // }
       
               // If all conditions are met, submit the form
               document.getElementById("game_form").submit();
@@ -142,7 +142,9 @@
   <a href="/rating" class="action action3">Ranking</a>
   <a href="/match_list" class="action action4">Match history</a>
   <a href="/rating_evolution" class="action action3">Rating evolution</a>
-  <a href="/metrics" class="action action4">Players Metrics (new)</a>
+  <a href="/metrics" class="action action4">Players Metrics</a>
+  <a href="/add_player" class="action action3">Add player</a>
+  <a href="/players" class="action action4">Player list</a>
 </div>
 
 

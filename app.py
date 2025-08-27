@@ -16,9 +16,12 @@ import dash_bootstrap_components as dbc
 import sys
 import os
 import pytz
+from setup import setup_db
 
 
 app = Flask(__name__, template_folder="Templates")
+
+setup_db()
 
 
 def get_player_match_id_by_timestamp_and_by_player_id(
